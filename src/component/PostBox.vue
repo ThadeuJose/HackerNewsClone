@@ -52,6 +52,11 @@
 	  border: 1px solid black;
 	  padding: 5px;
 	  margin-bottom:10px;
+	  cursor: pointer;
+	}
+	
+	.post-box:hover {
+  	border: 1px solid #fd9644;
 	}
 	
 	.title-box {
