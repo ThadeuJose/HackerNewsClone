@@ -6,7 +6,7 @@
       </div>
       <div class="title-box">
         <p class="title">{{item.title}}</p>
-        <a :href=item.url class="link" v-if=item.url>({{item.url | urlShortner}})</a>
+        <a :href=item.url target="_blank" rel="noopener" class="link" v-if=item.url>({{item.url | urlShortner}})</a>
         <p class="author">by {{item.by}}</p>
         <p class="time">{{item.time | time}}</p>
       </div>
