@@ -32,6 +32,7 @@ const actions = {
 const mutations = {
 	  
   ADD_STORIES: function (state, { elem }) {
+  	elem.hide = false;
     state.stories.push(elem);
   }      
 	

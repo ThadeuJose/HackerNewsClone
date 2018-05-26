@@ -1,5 +1,5 @@
 <template>	
-    <div class='post-box'>
+    <div class='post-box' v-if = '!item.hide'>
     	<div class="upvote-box">				
 				<icon class='icon' name="chevron-up" scale="1.5"></icon>
         <p class="upvote">{{item.score}}</p>
@@ -10,8 +10,8 @@
         <p class="author">by {{item.by}}</p>
         <p class="time">{{item.time | time}}</p>
       </div>
-      <div class="icon-close-box">
-      	<icon class='icon icon-close' name="regular/times-circle" scale="1.5"></icon>
+      <div class="icon-close-box">      	
+      	<span @click='hidden(item)'><icon class='icon icon-close' name="regular/times-circle" scale="1.5" ></icon></span>
       </div>
     </div>
 </template>
@@ -34,6 +34,12 @@
 					time: function (value) {
 						return value;
 					}
+				},
+				methods:{
+					hidden(item) {
+						console.log("Clicou");
+							item.hide = !item.hide;
+					}							
 				},
 		    components: { 
 		    }
