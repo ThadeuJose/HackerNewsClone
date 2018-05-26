@@ -1,0 +1,21 @@
+TODO
+	Ajeitar o css para rem e 62.5 trick
+	Ajeitar a url para ir para outra pagina com o no openner
+	Fazer o hover do postbox no atom
+	Fazer o hide
+	Fazer o modal quando é clicado em qualquer outro lugar exceto o link 
+		Event Delegation
+	Mostrar a hora 
+		http://momentjs.com/docs/#/use-it/
+		http://momentjs.com/docs/#/durations/subtract/
+
+Infinity Scroll  
+	https://stackoverflow.com/questions/10072216/jquery-infinite-scroll-with-div-not-scrollbar-of-body
+	https://codepen.io/Wryte/pen/Fjnil/
+Layout Bonito
+
+API 
+	https://github.com/HackerNews/API
+
+Inspired by 
+	https://github.com/kevguy/vue-hackernews-2.0-typescript
