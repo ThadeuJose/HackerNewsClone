@@ -1,6 +1,6 @@
 <template>	
     <main>
-		<postBox v-for="item in stories" :key="item.id" v-bind:item="item"> </postBox>
+		<postBox v-for="item in stories" :key="item.id" :item="item"> </postBox>
     </main>
 </template>
 
