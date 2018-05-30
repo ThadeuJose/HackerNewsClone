@@ -13,15 +13,22 @@
       <div class="icon-close-box">      	
       	<span v-on:click.stop='hidden(item)'><icon class='icon icon-close' name="regular/times-circle" scale="1.5" ></icon></span>
       </div>
+      <modal :item='item' :visible='this.visible'></modal>
     </div>
 </template>
 
 <script>
 		import 'vue-awesome/icons/regular/times-circle'
 		import 'vue-awesome/icons/chevron-up'
+		import modal from './Modal.vue'
 		
     export default {    
         props: ['item'],
+        data() {
+        	return {
+        		visible: false
+        	}
+        },
         filters: {
 					urlShortner: function (value) {
 						if (!value) return ''
@@ -41,10 +48,12 @@
 							item.hide = !item.hide;
 					},
 					modal(item) {
+						this.visible=!this.visible
 						console.log("Clicou no modal");							
 					},				
 				},
 		    components: { 
+		    	modal
 		    }
     }
 </script>
