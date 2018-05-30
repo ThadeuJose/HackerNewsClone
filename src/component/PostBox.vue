@@ -1,17 +1,17 @@
 <template>	
-    <div class='post-box' v-if = '!item.hide'>
+    <div class='post-box' v-if = '!item.hide' @click = 'modal(item)'>
     	<div class="upvote-box">				
 				<icon class='icon' name="chevron-up" scale="1.5"></icon>
         <p class="upvote">{{item.score}}</p>
       </div>
       <div class="title-box">
         <p class="title">{{item.title}}</p>
-        <a :href=item.url target="_blank" rel="noopener" class="link" v-if=item.url>({{item.url | urlShortner}})</a>
+        <a v-on:click.stop :href=item.url target="_blank" rel="noopener" class="link" v-if=item.url>({{item.url | urlShortner}})</a>
         <p class="author">by {{item.by}}</p>
         <p class="time">{{item.time | time}}</p>
       </div>
       <div class="icon-close-box">      	
-      	<span @click='hidden(item)'><icon class='icon icon-close' name="regular/times-circle" scale="1.5" ></icon></span>
+      	<span v-on:click.stop='hidden(item)'><icon class='icon icon-close' name="regular/times-circle" scale="1.5" ></icon></span>
       </div>
     </div>
 </template>
@@ -39,7 +39,10 @@
 					hidden(item) {
 						console.log("Clicou");
 							item.hide = !item.hide;
-					}							
+					},
+					modal(item) {
+						console.log("Clicou no modal");							
+					},				
 				},
 		    components: { 
 		    }
