@@ -1,5 +1,5 @@
 TODO
-	
+	Colocar a lista de comment
 	Ajeitar postbox com duas stories
 	Mostrar a hora 
 		http://momentjs.com/docs/#/use-it/
@@ -7,6 +7,8 @@ TODO
 	Fazer animação de transição no modal?
 
 Design TODO
+	Colocar a quantidade de descendentes
+	Fazer o footer com o meu nome
 	Colocar os links menores e mais claros
 	Ajeitar tudo para 80vw
 	Colocar um cinza claro no fundo do site?

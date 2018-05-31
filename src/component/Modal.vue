@@ -1,6 +1,6 @@
 <template>	
-  <div class ='background' v-if='visible' :style="{ height: hbody + 'px' }">
-  	<div class='modal'>
+  <div class ='background' v-if='visible' :style="{ height: hbody + 'px' }" @click='hidden()'>
+  	<div class='modal' v-on:click.stop>
   		{{item}}
   	</div>  	
   </div>	
@@ -23,7 +23,11 @@
       	  this.hbody = document.body.scrollHeight;
     		});
 			},		
-      methods: {	
+      methods: {
+      	hidden() {
+      		this.visible = false;
+      		document.body.classList.remove('modal-open');
+      	}	
 			},
 	    components: { 
 	    }
