@@ -16,3 +16,7 @@ main{
 	width:80vw;
 }
 
+.modal-open{
+	overflow:hidden;
+
+}

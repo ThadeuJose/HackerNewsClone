@@ -1,9 +1,10 @@
 TODO
-	Fazer o modal quando é clicado em qualquer outro lugar exceto o link 
-		Event Delegation
+	
+	Ajeitar postbox com duas stories
 	Mostrar a hora 
 		http://momentjs.com/docs/#/use-it/
 		http://momentjs.com/docs/#/durations/subtract/
+	Fazer animação de transição no modal?
 
 Design TODO
 	Colocar os links menores e mais claros

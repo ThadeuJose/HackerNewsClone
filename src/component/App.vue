@@ -1,5 +1,6 @@
 <template>	
-    <div class="app">
+    <div class="app">    
+    	<Modal></Modal>
     	<Header></Header>
     	<Menu></Menu>
     	<List></List>    	
@@ -10,7 +11,8 @@
 	import Header from './Header.vue'
 	import Menu from './Menu.vue'
 	import List from './ListOfPost.vue'
-
+	import Modal from './Modal.vue'
+	
   export default {    
       data() {
           return {
@@ -21,9 +23,8 @@
       	this.$store.dispatch('LOAD_STORIES');
       },        
 	    components: { 
-	    	Header,Menu,List 
+	    	Header,Menu,List,Modal
 	    }
   }
 </script>
-
 
