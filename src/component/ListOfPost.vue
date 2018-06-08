@@ -13,9 +13,6 @@
           }   
       },  
       computed: {
-				story() {
-  				return this.$store.getters.stories;
-				}
 			},
 	    components: { 
 	    	postBox	
