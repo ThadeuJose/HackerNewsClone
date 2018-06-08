@@ -2,6 +2,7 @@ TODO
 	Mostrar a hora 
 		http://momentjs.com/docs/#/use-it/
 		http://momentjs.com/docs/#/durations/subtract/
+		
 	Mostrar a quantidade de descendentes 	
 	Fazer o design do modal se não vc não sabe o que ta acontecendo
 		Fazer um objeto url, upvote e comments, time
@@ -11,7 +12,6 @@ TODO
 Design TODO	
 	Ajeitar o css para rem e 62.5 trick
 	Colocar os links menores e mais claros
-	Colocar a quantidade de descendentes
 	Fazer o footer com o meu nome
 	Colocar os links menores e mais claros
 	Ajeitar tudo para 80vw

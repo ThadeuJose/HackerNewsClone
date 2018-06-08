@@ -19,15 +19,18 @@ const actions = {
 	},
 
 	LOAD_COMMENTS: ({ dispatch, commit },ids) => {
-		for(let id of ids){
-			dispatch('GET_ITEMS',id).then((response) => {	 					
-				commit('ADD_COMMENTS', { elem: response })			 	
-			}, (err) => {
-				console.log(err)
-			})
+		if(ids){
+			for(let id of ids){
+				dispatch('GET_ITEMS',id).then((response) => {	 					
+					commit('ADD_COMMENTS', { elem: response })			 	
+				}, (err) => {
+					console.log(err)
+				})
+			}
 		}
   },
-	LOAD_STORIES: function ({ dispatch, commit }) {
+  
+	LOAD_STORIES: ({ dispatch, commit }) => {
     axios.get('https://hacker-news.firebaseio.com/v0/topstories.json').then((response) => {
       const maxStories = 30;
       const ids = response.data.slice(0,30);
