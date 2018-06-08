@@ -2,6 +2,12 @@
   <div class ='background' v-if='visible' :style="{ height: hbody + 'px' }" @click='hidden()'>
   	<div class='modal' v-on:click.stop>
   		{{item}}
+			<div>
+				<p>{{item.title}}</p>
+				<p>{{item.text}}</p>
+				<p>{{item.by}}</p>
+				<p>{{item.time}}</p>
+  		</div>
   		{{comments}}
   	</div>  	
   </div>	
