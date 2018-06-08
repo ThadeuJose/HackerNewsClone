@@ -2,6 +2,7 @@
   <div class ='background' v-if='visible' :style="{ height: hbody + 'px' }" @click='hidden()'>
   	<div class='modal' v-on:click.stop>
   		{{item}}
+  		{{comments}}
   	</div>  	
   </div>	
 </template>
@@ -12,12 +13,15 @@
         	return {
         		visible: false,
         		item: {},
+        		comments: {},
 			      hbody: 0
         	}
       },
       mounted() {
-    		this.$root.$on('modal', data => {
+	      this.$root.$on('modal', data => {
       	  this.item = data;
+      	  this.$store.dispatch('LOAD_COMMENTS',this.item.kids);    		
+      	  this.comments = this.$store.getters.comments;
       	  this.visible = true;
       	  document.body.classList.add('modal-open');
       	  this.hbody = document.body.scrollHeight;
@@ -50,6 +54,7 @@
 		transform:translate(-50%,0);
 		margin: 0 auto;
 		background-color:white;
+		overflow-y:scroll;
 	}
 </style>
 
