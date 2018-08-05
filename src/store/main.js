@@ -20,6 +20,7 @@ const actions = {
 
 	LOAD_COMMENTS: ({ dispatch, commit },ids) => {
 		if(ids){
+			commit('RESET_COMMENTS');
 			for(let id of ids){
 				dispatch('GET_ITEMS',id).then((response) => {	 					
 					commit('ADD_COMMENTS', { elem: response })			 	
@@ -55,8 +56,13 @@ const mutations = {
     state.stories.push(elem);
   },      
   
-  ADD_COMMENTS: function (state, { elem }) {
+  ADD_COMMENTS: function (state, { elem }) {	  
     state.comments.push(elem);
+  },	
+  
+  RESET_COMMENTS: function (state) {	  
+  	console.log('Resetou');
+    state.comments = [];
   }	
 }
 

@@ -26,7 +26,7 @@
       mounted() {
 	      this.$root.$on('modal', data => {
       	  this.item = data;
-      	  this.$store.dispatch('LOAD_COMMENTS',this.item.kids);    		
+     	  	this.$store.dispatch('LOAD_COMMENTS',this.item.kids);    		
       	  this.comments = this.$store.getters.comments;
       	  this.visible = true;
       	  document.body.classList.add('modal-open');
@@ -52,8 +52,7 @@
 	}
 	.modal{
 		height: 900px;
-		width: 900px;
-		margin: auto;
+		width: 90%;
 		position: fixed;
 		top: 50px;
 		left:50%;
