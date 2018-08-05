@@ -19,6 +19,7 @@
 <script>
 		import 'vue-awesome/icons/regular/times-circle'
 		import 'vue-awesome/icons/chevron-up'
+		import moment from 'moment'
 				
     export default {    
         props: ['item'],
@@ -32,7 +33,7 @@
 						return value.split('.').slice(-2).join('.');
 					},
 					time: function (value) {
-						return value;
+						return moment.unix(value).fromNow();
 					}
 				},
 				methods:{

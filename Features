@@ -1,9 +1,7 @@
 TODO
-	Mostrar a hora 
-		http://momentjs.com/docs/#/use-it/
-		http://momentjs.com/docs/#/durations/subtract/
-		
 	Mostrar a quantidade de descendentes 	
+	Colapsar os comments
+	Mostrar os comment ate o 3 nivel	
 	Fazer o design do modal se não vc não sabe o que ta acontecendo
 		Fazer um objeto url, upvote e comments, time
 	Fazer animação de transição no modal?
